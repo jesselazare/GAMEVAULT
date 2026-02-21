@@ -1,0 +1,198 @@
+/* ------------------------- */
+/* GameVault Dark Retro CSS  */
+/* ------------------------- */
+
+/* Reset et Structure de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Sticky Footer : Configuration du Body */
+body {
+  background-color: #0d0d0d;
+  color: #33ff00;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Prend toute la hauteur de l'écran */
+}
+
+/* Header */
+header {
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #33ff00;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  text-shadow: 0 0 5px #33ff00;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #33ff00;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+/* Main Content (Pousse le footer en bas) */
+main {
+  flex: 1;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #33ff00;
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 95%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(51, 255, 0, 0.2);
+}
+
+/* Grille pour le Catalogue (games.php) */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.game-card {
+  background: #1a1a1a;
+  border: 1px solid #33ff00;
+  padding: 20px;
+  border-radius: 8px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(51, 255, 0, 0.4);
+}
+
+.game-card h3 {
+  color: #00ffcc;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #33ff00;
+  padding-bottom: 5px;
+}
+
+/* Tableaux (Dashboard & Admin) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #111;
+}
+
+th,
+td {
+  border: 1px solid #33ff00;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #33ff00;
+  color: #000;
+  text-transform: uppercase;
+}
+
+tr:hover {
+  background: rgba(51, 255, 0, 0.1);
+}
+
+/* Forms */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #33ff00;
+  background: #000;
+  color: #33ff00;
+  width: 100%;
+  outline: none;
+}
+
+form input:focus {
+  box-shadow: 0 0 10px #33ff00;
+}
+
+/* Boutons */
+button,
+.btn {
+  padding: 12px 25px;
+  background: #33ff00;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+button:hover,
+.btn:hover {
+  background: #00ffcc;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.btn-danger {
+  background: #ff3333;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #33ff00;
+  color: #33ff00;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 0.9em;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+}
